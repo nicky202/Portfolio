@@ -4,11 +4,29 @@ nav {
   justify-content: space-between;
   padding: 0 4rem;
   position: fixed;
+  position: relative;
+  button {
+    border-radius: 50%;
+    background-color: transparent;
+    padding: 5px;
+    box-shadow: none;
+    border: 0;
+    &:hover {
+      box-shadow: none;
+      background-color: #efefef;
+    }
+  }
   h2 {
     color: #333;
     cursor: pointer;
   }
-  ul {
+  .bar {
+    display: none;
+    color: #333;
+    cursor: pointer;
+  }
+  .topnav {
+    display: block;
     li {
       display: inline-block;
       margin-left: 3rem;
@@ -19,5 +37,30 @@ nav {
 @media screen and (max-width: 1440px) {
   nav {
     padding: 0 2rem;
+  }
+}
+@media screen and (max-width: 812px) {
+  nav {
+    .topnav {
+      position: absolute;
+      top: 10vh;
+      right: 1rem;
+      display: none;
+      border-radius: 10px;
+      box-shadow: 0 0 5px #33333388;
+      background-color: #fff;
+      li {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        padding: 0.75rem 2rem;
+      }
+      &.responsive {
+        display: block;
+      }
+    }
+    .bar {
+      display: block;
+    }
   }
 }
