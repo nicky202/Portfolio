@@ -1,0 +1,51 @@
+.containerModal {
+  .fond {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #33333355;
+    z-index: 4;
+  }
+  .modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50vw;
+    height: auto;
+    max-height: 90vh;
+    background-color: #fff;
+    overflow-x: hidden;
+    z-index: 5;
+    border-radius: 10px;
+    .image {
+      position: relative;
+      display: flex;
+      left: 0;
+      transition: all 0.3s ease;
+    }
+    p {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      cursor: pointer;
+      padding: 10px 10px 5px 10px;
+      color: #333;
+      border-radius: 50%;
+      color: #efefef;
+      background-color: #bd2d2c;
+      &:hover {
+        transition: all 0.2s ease;
+        opacity: 0.8;
+      }
+    }
+    .prev {
+      left: 1rem;
+    }
+    .next {
+      right: 1rem;
+    }
+  }
+}
